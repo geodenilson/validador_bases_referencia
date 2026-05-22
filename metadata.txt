@@ -1,0 +1,22 @@
+[general]
+name=Validador de Bases de Referência
+qgisMinimumVersion=3.16
+description=Validação de qualidade e adequação de bases geográficas de referência.
+version=1.0.0
+author=Equipe de Desenvolvimento
+email=contato@exemplo.com
+about=Plugin para validação de qualidade e adequação de bases geográficas de referência. Inclui geração de pontos amostrais, matriz de confusão, índices Kappa, geração de quadrantes para PEC, adequação de bases conforme padrões configuráveis e geração automática de APPs hídricas.
+tracker=https://github.com/seu-usuario/validador-bases-referencia/issues
+repository=https://github.com/seu-usuario/validador-bases-referencia
+tags=python, validacao, qualidade, kappa, app, hidrografia, amostragem, pec, bases
+homepage=https://github.com/seu-usuario/validador-bases-referencia
+category=Plugins
+icon=icones/logo.svg
+experimental=True
+deprecated=False
+hasProcessingProvider=no
+changelog=
+    1.0.0 - Versão inicial
+        * Aba de Validação: geração de pontos amostrais, rotulagem, matriz de confusão, Kappa
+        * Aba de Adequação: padronização de bases conforme padrão escolhido
+        * Aba APP Hídrica: geração de APP a partir da hidrografia

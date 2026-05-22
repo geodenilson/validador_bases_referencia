@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Fundo: verde sólido com cantos arredondados -->
+  <rect x="4" y="4" width="120" height="120" rx="22" ry="22" fill="#27ae60"/>
+  <!-- Escudo branco -->
+  <path d="M30 70 L30 38 L60 28 L98 40 L98 70 Q98 96 64 110 Q30 96 30 70 Z"
+        fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <!-- Linhas que representam camadas/vetores -->
+  <path d="M40 56 Q56 50 64 60 T92 56" fill="none" stroke="#27ae60" stroke-width="3"/>
+  <path d="M40 70 Q56 64 64 74 T92 70" fill="none" stroke="#27ae60" stroke-width="3"/>
+  <!-- Pontos amostrais -->
+  <circle cx="50" cy="60" r="3" fill="#e74c3c"/>
+  <circle cx="74" cy="58" r="3" fill="#e74c3c"/>
+  <circle cx="60" cy="78" r="3" fill="#e74c3c"/>
+  <circle cx="82" cy="80" r="3" fill="#e74c3c"/>
+  <!-- Check dourado -->
+  <path d="M44 86 L60 100 L94 64" fill="none" stroke="#f1c40f"
+        stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

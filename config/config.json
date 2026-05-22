@@ -1,0 +1,71 @@
+{
+    "plugin_name": "Validador de Bases de Referência",
+    "version": "1.0.0",
+    "default_crs": "EPSG:4674",
+    "default_crs_metric": "EPSG:5880",
+    "amostragem": {
+        "nivel_confianca": 0.95,
+        "erro_admissivel": 0.05,
+        "estrategias": [
+            {"id": "estratificada_proporcional", "nome": "Estratificada Proporcional"},
+            {"id": "estratificada_igual", "nome": "Estratificada Igualitária"},
+            {"id": "aleatoria_simples", "nome": "Aleatória Simples"},
+            {"id": "sistematica", "nome": "Sistemática"}
+        ]
+    },
+    "criterios_aprovacao": {
+        "kappa_minimo": 0.85,
+        "exatidao_global_minima": 0.85,
+        "lqa_maximo": 0.04,
+        "pec_classe_b_25k_metros": 20.0,
+        "pec_classe_a_25k_metros": 12.5,
+        "pec_classe_c_25k_metros": 25.0
+    },
+    "pec_tabela": {
+        "1:25000": {"A": 12.5, "B": 20, "C": 25},
+        "1:50000": {"A": 25, "B": 40, "C": 50},
+        "1:100000": {"A": 50, "B": 80, "C": 100},
+        "1:250000": {"A": 125, "B": 200, "C": 250}
+    },
+    "quadrante_padrao_metros": 1000,
+    "wms_services": {
+        "OpenStreetMap": {
+            "url": "type=xyz&url=https://tile.openstreetmap.org/{z}/{x}/{y}.png&zmax=19&zmin=0",
+            "tipo": "xyz"
+        },
+        "Google Satélite": {
+            "url": "type=xyz&url=https://mt1.google.com/vt/lyrs%3Ds%26x%3D{x}%26y%3D{y}%26z%3D{z}&zmax=19&zmin=0",
+            "tipo": "xyz"
+        },
+        "Esri Satélite": {
+            "url": "type=xyz&url=https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&zmax=19&zmin=0",
+            "tipo": "xyz"
+        }
+    },
+    "padroes_adequacao": [
+        {
+            "id": "ad_car",
+            "nome": "Base para Análise Dinamizada do CAR",
+            "descricao": "Padrão Base para Análise Dinamizada do CAR (SIRGAS 2000 / EPSG:4674)"
+        }
+    ],
+    "hidrografia_classes": [
+        {"classe": 1, "nome": "Rio até 10 m", "app_metros": 30, "geometria": "Linha/Polígono"},
+        {"classe": 2, "nome": "Rio de 10 a 50 m", "app_metros": 50, "geometria": "Polígono"},
+        {"classe": 3, "nome": "Rio de 50 a 200 m", "app_metros": 100, "geometria": "Polígono"},
+        {"classe": 4, "nome": "Rio de 200 a 600 m", "app_metros": 200, "geometria": "Polígono"},
+        {"classe": 5, "nome": "Rio acima de 600 m", "app_metros": 500, "geometria": "Polígono"},
+        {"classe": 6, "nome": "Lago/Lagoa natural", "app_metros": 50, "geometria": "Polígono"},
+        {"classe": 7, "nome": "Reservatório artificial", "app_metros": 30, "geometria": "Polígono"},
+        {"classe": 8, "nome": "Nascente", "app_metros": 50, "geometria": "Ponto"}
+    ],
+    "bases_individuais_uso_solo": [
+        "AML_FLORESTA",
+        "AML_CERRADO",
+        "AML_CAMPO",
+        "VEGETACAO_2008",
+        "VEGETACAO_ATUAL",
+        "ANTROPIZADO",
+        "CONSOLIDADO"
+    ]
+}

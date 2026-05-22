@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.zip
+*.pdf
+.env
+*.log
+*.aux
+*.nav
+*.snm
+*.toc
+*.out
+*.vrb
